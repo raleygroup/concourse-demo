@@ -2,6 +2,7 @@ platform: linux
 image: "docker:///node#4.2.3"
 inputs:
   - name: github
+    path: .
 run:
-  path: npm
-  args: ["test", "github"]
+  path: bash
+  args: ["test.sh"]

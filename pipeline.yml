@@ -1,7 +1,4 @@
 resources:
-  - name: 10s
-    type: time
-    source: {interval: 10s}
   - name: github
     type: git
     source:
@@ -11,8 +8,6 @@ resources:
 jobs:
 - name: hello-world
   plan:
-  - get: 10s
-    trigger: true
   - get: github
     trigger: true
   - task: install
