@@ -1,16 +1,16 @@
 resources:
-  - name: github
+  - name: sources
     type: git
     source:
       uri: https://github.com/danielsiwiec/concourse-demo.git
       branch: master
 
 jobs:
-- name: hello-world
+- name: test
   plan:
-  - get: github
+  - get: sources
     trigger: true
   - task: install
-    file: github/install.yml
+    file: sources/install.yml
   - task: test
-    file: github/test.yml
+    file: sources/test.yml
