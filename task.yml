@@ -1,5 +1,9 @@
 platform: linux
-image: "docker:///ubuntu"
+image: "docker:///node#4.2.3"
+inputs:
+  - name: github
 run:
-  path: echo
-  args: ["Hello, world!"]
+  # path: npm
+  # args: ["install"]
+  path: ls
+  args: ["-la"]
