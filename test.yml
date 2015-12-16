@@ -4,5 +4,4 @@ inputs:
   - name: install
     path: .
 run:
-  path: ls
-  args: ["-la"]
+  path: ./test.sh

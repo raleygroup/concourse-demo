@@ -4,5 +4,4 @@ inputs:
   - name: github
     path: .
 run:
-  path: bash
-  args: ["install.sh"]
+  path: ./install.sh
