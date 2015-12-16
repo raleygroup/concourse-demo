@@ -15,5 +15,7 @@ jobs:
     trigger: true
   - get: github
     trigger: true
-  - task: say-hello
-    file: github/task.yml
+  - task: install
+    file: github/install.yml
+  - task: test
+    file: github/test.yml

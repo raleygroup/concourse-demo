@@ -3,7 +3,5 @@ image: "docker:///node#4.2.3"
 inputs:
   - name: github
 run:
-  # path: npm
-  # args: ["install"]
-  path: ls
-  args: ["-la"]
+  path: npm
+  args: ["install", "github"]
