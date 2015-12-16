@@ -1,0 +1,5 @@
+platform: linux
+image: "docker:///ubuntu"
+run:
+  path: echo
+  args: ["Hello, world!"]

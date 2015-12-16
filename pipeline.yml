@@ -1,0 +1,24 @@
+resources:
+  - name: 10s
+    type: time
+    source: {interval: 10s}
+  - name: github
+    type: git
+    source:
+      uri: git@github.com:danielsiwiec/concourse-demo.git
+      branch: master
+
+jobs:
+- name: hello-world
+  plan:
+  - get: 10s
+    trigger: true
+  - get: github
+    trigger: true
+  - task: say-hello
+    config:
+      platform: linux
+      image: "docker:///ubuntu"
+      run:
+        path: echo
+        args: ["Hello, world!"]
