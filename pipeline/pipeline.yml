@@ -11,6 +11,6 @@ jobs:
   - get: sources
     trigger: true
   - task: install
-    file: sources/install.yml
+    file: sources/pipeline/install.yml
   - task: test
-    file: sources/test.yml
+    file: sources/pipeline/test.yml
