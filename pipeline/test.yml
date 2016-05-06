@@ -1,7 +1,8 @@
 platform: linux
 image: "docker:///node#4.2.3"
 inputs:
-  - name: install
-    path: .
+  - name: sources
+outputs:
+  - name: test-report
 run:
-  path: ./pipeline/test.sh
+  path: ./sources/pipeline/test.sh

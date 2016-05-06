@@ -1,2 +1,4 @@
 #!/bin/sh
-npm test
+cd sources
+npm install
+npm test --silent > ../test-report/report.txt
