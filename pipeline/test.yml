@@ -1,5 +1,7 @@
 platform: linux
-image: "docker:///node#4.2.3"
+image_resource:
+  type: cocker-image
+  source: {repository: node, tag: "4.2.3"}
 inputs:
   - name: sources
 outputs:

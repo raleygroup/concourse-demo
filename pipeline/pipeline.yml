@@ -2,7 +2,7 @@ resources:
   - name: sources
     type: git
     source:
-      uri: https://github.com/danielsiwiec/concourse-demo.git
+      uri: https://github.com/raleygroup/concourse-demo.git
       branch: master
 
 jobs:
